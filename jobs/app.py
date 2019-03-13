@@ -20,7 +20,7 @@ def execute_sql(sql, values=(), commit=False, single=False):
     else:
         results = cursor.fetchone() if single else cursor.fetchall()
     cursor.close()
-    return result
+    return results
 
 @app.teardown_appcontext
 
